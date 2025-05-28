@@ -1,0 +1,72 @@
+/* -------------- 1. Reset & base ---------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray-900: #1a1a1a;
+  --gray-500: #6b6b6b;
+  --gray-200: #e5e5e5;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--gray-900);
+  background: var(--white);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  line-height: 1.6;
+}
+
+/* -------------- 2. Quote container ------------- */
+.quote-box {
+  border: 1px solid var(--gray-200);
+  padding: 3.5rem 3rem 3rem;
+  width: min(32rem, 90vw);
+  text-align: center;
+}
+
+blockquote {
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.875rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+figcaption {
+  font-style: normal;
+  color: var(--gray-500);
+  margin-bottom: 2.25rem;
+}
+
+/* -------------- 3. Controls -------------------- */
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+button,
+a#tweet {
+  padding: 0.8rem 1.6rem;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+}
+
+a#tweet { border-color: var(--gray-900); }
+
+button:hover,
+a#tweet:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* Slight motion for polish */
+button:active,
+a#tweet:active { transform: translateY(1px); }
